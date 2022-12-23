@@ -18,6 +18,8 @@ class Person{
 class Worker extends Person{
     constructor(name, age, energy,xp = 0, hourlyWage = 10) {
         super(name, age, energy);
+        this.xp = xp;
+        this.hourlyWage = hourlyWage;
     }
     goToWork() {
         this.xp = xp + 10;
@@ -27,8 +29,9 @@ class Worker extends Person{
 
 // Task 3: Code an intern object, run methods
 function intern() {
-    var inter = new Worker("Bob", 21, 110, 0, 10);
+    var inter = new Worker(name="Bob",age= 21,energy= 110, xp=0,hourlyWage=10);
     inter.goToWork();
+   
     return inter;
 }
 
